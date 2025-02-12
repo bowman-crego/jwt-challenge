@@ -3,9 +3,11 @@ import { UserLogin } from "../interfaces/UserLogin";
 const login = async (userInfo: UserLogin) => {
   // TODO: make a POST request to the login route
   try {
-    const response = await fetch("/auth/login", {
+    const response = await fetch("http://localhost:3001/auth/login", {
       method: "POST",
-      headers: {},
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(userInfo),
     });
 

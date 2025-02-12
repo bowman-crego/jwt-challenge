@@ -32,7 +32,7 @@ a:hover {
 }
 
 body {
-  background: #ECF0F1;
+  background: gray;
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
@@ -50,11 +50,12 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.8em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -105,11 +106,11 @@ tbody tr:nth-child(odd) {
 }
 
 .nav-title a {
-  color: #b864c4;
+  color: blue;
 }
 
 .nav-item {
-  display: block;
+  display: flex;
   margin-left: auto;
   list-style: none;
 }
@@ -147,22 +148,22 @@ tbody tr:nth-child(odd) {
 }
 
 .todo {
-  background-color: #e9cbec;
+  background-color: burlywood;
 }
 
 .inprogress {
-  background-color: #b864c4;
+  background-color: brown;
 }
 
 .done {
-  background-color: #732381;
+  background-color: beige;
 }
 
 .ticket-card {
   text-align: left;
   background-color: #fff;
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 0.1em solid black;
@@ -181,9 +182,11 @@ tbody tr:nth-child(odd) {
 
 
 .form {
-  width: 60%;
-  height: 80%;
-  background-color: #b864c4;
+  width: 100%;
+  height: 60%;
+  background-color: burlywood;
+  border-radius: 8px;
+  opacity: 0.5;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -192,7 +195,7 @@ tbody tr:nth-child(odd) {
 }
 
 .form > h1, .form > label {
-  color: yellow;
+  color: black;
 }
 
 .form > input {
@@ -207,6 +210,7 @@ tbody tr:nth-child(odd) {
 
 .form button {
   margin-top: 2.5%;
+  padding: 0.5em 1em;
 }
 
 .form textarea {
@@ -216,7 +220,7 @@ tbody tr:nth-child(odd) {
 }
 
 .editBtn {
-  background-color: #f9f9f9;
+  background-color: gray;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -225,7 +229,9 @@ tbody tr:nth-child(odd) {
 }
 
 .deleteBtn {
-  background-color: #f9f9f9;
+  background-color: red ;
+  
+  padding: 0.6em 1.2em;
   font-weight: 500;
   color: black;
   text-decoration: inherit;

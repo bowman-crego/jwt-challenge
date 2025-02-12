@@ -7,7 +7,7 @@ import Swimlane from '../components/Swimlane';
 import { TicketData } from '../interfaces/TicketData';
 import { ApiMessage } from '../interfaces/ApiMessage';
 
-import auth from '../utils/auth';
+import auth from '../utils/auth.js';
 
 const boardStates = ['Todo', 'In Progress', 'Done'];
 
@@ -60,16 +60,19 @@ const Board = () => {
     <>
     {
       !loginCheck ? (
-        <div className='login-notice'>
+        <div className='board login-notice'>
           <h1>
             Login to create & view tickets
           </h1>
         </div>  
       ) : (
           <div className='board'>
-            <button type='button' id='create-ticket-link'>
-              <Link to='/create' >New Ticket</Link>
+            <li className='nav-item button'>
+            <button type='button'>
+              <Link to='/tickets'>New Ticket</Link>
             </button>
+            
+          </li>
             <div className='board-display'>
               {boardStates.map((status) => {
                 const filteredTickets = tickets.filter(ticket => ticket.status === status);

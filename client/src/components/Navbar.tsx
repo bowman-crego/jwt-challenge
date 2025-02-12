@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import auth from '../utils/auth';
+import auth from '../utils/auth.js';
 
 const Navbar = () => {
   const [ loginCheck, setLoginCheck ] = useState(false);
@@ -18,13 +18,14 @@ const Navbar = () => {
 
   return (
     <div className='nav'>
-      <div className='nav-title'>
+      <div className='nav ul nav-title'>
         <Link to='/'>Krazy Kanban Board</Link>
       </div>
       <ul>
       {
         !loginCheck ? (
-          <li className='nav-item'>
+          
+          <li className='nav-item button'>
             <button type='button'>
               <Link to='/login'>Login</Link>
             </button>
